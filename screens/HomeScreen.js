@@ -7,10 +7,14 @@ import {
   Text,
   TouchableOpacity,
   View,
+  StatusBar
 } from 'react-native';
-import { WebBrowser } from 'expo';
-
+import { WebBrowser, LinearGradient } from 'expo';
 import { MonoText } from '../components/StyledText';
+import * as theme from '../constants/theme'
+import Block from '../components/Block'
+import TopBar from '../components/TopBar'
+import CustomStatusBar from '../components/CustomStatusBar'
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -19,6 +23,17 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
+      // <Block middle flex={1.0}>
+      //   <LinearGradient
+      //     colors={[theme.colors.primary, theme.colors.accent]}
+      //     style={{flex : 1.0}}
+      //     start={[0, 0]} end={[1, 0]}/>
+      // </Block>
+      // <View style={styles.container}>
+      //   <CustomStatusBar/>
+      //   <TopBar/>
+      // </View>
+      
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.welcomeContainer}>

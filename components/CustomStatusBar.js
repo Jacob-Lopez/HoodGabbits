@@ -8,7 +8,7 @@ export default class CustomStatusBar extends Component {
     render() {
         return (
             <View style={styles.statusBarWrapper}>
-                <StatusBar backgroundColor="rgba(0, 0, 0, 0.24)" animated/>
+                <StatusBar backgroundColor="rgba(255, 255, 255, 0.24)" animated/>
             </View>
         );
     }

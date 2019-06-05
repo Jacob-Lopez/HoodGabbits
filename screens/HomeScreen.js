@@ -10,9 +10,6 @@ import {
   StatusBar
 } from 'react-native';
 import { WebBrowser, LinearGradient } from 'expo';
-import { MonoText } from '../components/StyledText';
-import * as theme from '../constants/theme'
-import Block from '../components/Block'
 import TopBar from '../components/TopBar'
 import CustomStatusBar from '../components/CustomStatusBar'
 
@@ -25,7 +22,7 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
         <CustomStatusBar/>
-        <TopBar/>
+        <TopBar firstIcon='md-menu' secondIcon='md-person' text='Home'/>
       </View>
     );
   }

@@ -1,22 +1,27 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, Animated } from 'react-native'
 import { LinearGradient } from 'expo'
-import { Block } from '../components/Block'
 import { Ionicons } from '@expo/vector-icons'
-import CardView from 'react-native-cardview'
 import * as theme  from '../constants/theme'
 
 export default class TopBar extends Component {
   render() {
+    const {
+      firstIcon,
+      secondIcon,
+      text,
+      ...props
+    } = this.props;
+
     return (
       <View style={[styles.container, theme.effects.shadow]}>
         <LinearGradient
           colors={[theme.colors.primary, theme.colors.accent]}
           style={styles.title}
           start={[0, 0]} end={[1, 0]}>
-            <Ionicons name="md-menu" size={32} color={theme.colors.white} style={styles.menu} />
-            <Text style={styles.text}>Home</Text>
-            <Ionicons name="md-person" size={32} color={theme.colors.white} />
+            <Ionicons name={firstIcon} size={32} color={theme.colors.white} style={styles.menu} />
+            <Text style={styles.text}>{text}</Text>
+            { secondIcon && <Ionicons name="md-person" size={32} color={theme.colors.white} /> }
         </LinearGradient>
       </View>
     );
